@@ -11,32 +11,34 @@
     </p>
 <script>
     
-    function reorder(str) {
-        let ord = str.split("");
-        let uppercase = [];
-        let lowercase = [];
-        let num = [];
+    let result = "";
 
-        for(let i = 0; i < ord.length; i++) {
+    function reorder(str) {
+        
+        let uppercase = "";
+        let lowercase = "";
+        let num = "";
+
+        for(let char of str) {
             
             // if letter is uppercase add it to caps array
-            if (ord[i] == ord[i].toUpperCase()) {
-                uppercase.push(ord[i]);
-                ord.splice(i, 1);
+            if (char >= "A" && char <="Z"){
+                uppercase += char;
+            } 
+            else if (char >= "a" && char <= "z"){
+                lowercase += char;
             }
-
-            if (ord[i] == ord[i].toLowerCase()) {
-                lowercase.push(ord[i]);
-            }
-            if (ord[i] == ord[i]) {
-            num.push(ord[i]);
-                
+            else if (char >= "0" && char <= "9") {
+                num += char;
             }
         }
-        console.log("ord", ord)
-        return uppercase.join("").concat(lowercase.join(""));
+        result = uppercase + lowercase + num; 
     }
-    console.log(reorder("hEl1o"))
+    //reorder('hA2p4Py');
+    //reorder('m11oveMENT');
+    reorder("s9hOrt4CAKE");
+    
+    console.log(result);
 </script>
 </body>
 </html>
