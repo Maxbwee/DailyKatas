@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Daily Kata 1</title>
+</head>
+<body>
+    <p>
+        Hello
+    </p>
+<script>
+    
+    function reorder(str) {
+        let ord = str.split("");
+        let uppercase = [];
+        let lowercase = [];
+        let num = [];
+
+        for(let i = 0; i < ord.length; i++) {
+            
+            // if letter is uppercase add it to caps array
+            if (ord[i] == ord[i].toUpperCase()) {
+                uppercase.push(ord[i]);
+                ord.splice(i, 1);
+            }
+
+            if (ord[i] == ord[i].toLowerCase()) {
+                lowercase.push(ord[i]);
+            }
+            if (ord[i] == ord[i]) {
+            num.push(ord[i]);
+                
+            }
+        }
+        console.log("ord", ord)
+        return uppercase.join("").concat(lowercase.join(""));
+    }
+    console.log(reorder("hEl1o"))
+</script>
+</body>
+</html>
