@@ -1,5 +1,6 @@
 
 const array1 = ["a", "2a", "2b", "b"];
+const array2 = ["y3ah", "budd1", "l1ght", "w3ight"]
 
 function numInStr(arr) {
     
@@ -16,4 +17,5 @@ function numInStr(arr) {
     return stringsWithNum;
 }
 
-console.log(numInStr(array1))
+console.log(numInStr(array1));
+console.log(numInStr(array2));
