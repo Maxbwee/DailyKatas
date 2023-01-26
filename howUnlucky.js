@@ -21,3 +21,5 @@ function howUnlucky(year) {
 }
 
 console.log(howUnlucky(2020))
+console.log(howUnlucky(2026))
+console.log(howUnlucky(2016))
